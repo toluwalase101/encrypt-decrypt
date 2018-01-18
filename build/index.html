@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <script type="text/javascript"  src="build/bundle.js"></script>
+  </head>
+  <body>
+    <form id="encryptForm">
+      <label for="key">Password</label>
+      <input type="text" name="key" id="key" />
+
+      <label for="encrypt">To Encrypt</label>
+      <textarea name="encrypt" id="encrypt"></textarea>
+
+      <label for="decrypt">To Decrypt</label>
+      <textarea name="decrypt" id="decrypt"></textarea>
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <p>Encrypt output: <span id="encrypted"></span></p>
+    <p>Decrypt output: <span id="decrypted"></span></p>
+  </body>
+</html>
