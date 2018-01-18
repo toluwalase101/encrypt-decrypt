@@ -14,7 +14,7 @@
     "http-server": "^0.11.1"
   },
   "scripts": {
-    "start": "webpack && http-server",
+    "start": "webpack && http-server -o",
     "build": "webpack"
   },
   "author": "Matt Mcnamee",
