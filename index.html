@@ -1,22 +1,58 @@
-<html>
+<!doctype html>
+<html class="no-js" lang="en">
   <head>
-    <script type="text/javascript"  src="build/bundle.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Encrypt/Decrypt</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    <script type="text/javascript" src="build/bundle.js"></script>
   </head>
   <body>
-    <form id="encryptForm">
-      <label for="key">Password</label>
-      <input type="text" name="key" id="key" />
+    <div class="grid-container">
+      <div class="grid-x" style="margin-top: 50px;">
+        <div class="cell small-8 small-offset-2">
+          <h1>Encrypt or decrypt a Message</h1>
+          <form id="encryptForm">
+            <label for="key" style="margin-top: 50px;"><h4>🗝 Enter the encryption password:</h4></label>
+            <input type="text" name="key" id="key" />
 
-      <label for="encrypt">To Encrypt</label>
-      <textarea name="encrypt" id="encrypt"></textarea>
+            <ul class="tabs" data-tabs id="options-tabs" style="margin-top: 50px;">
+              <li class="tabs-title is-active">
+                <a href="#encryptTab" aria-selected="true">Encrypt</a>
+              </li>
+              <li class="tabs-title">
+                <a href="#decryptTab">Decrypt</a>
+              </li>
+            </ul>
+            <div class="tabs-content" data-tabs-content="options-tabs">
+              <div class="tabs-panel is-active" id="encryptTab">
+                <label for="encrypt">Encrypt the following:</label>
+                <textarea name="encrypt" id="encrypt" rows="8"></textarea>
+                <input type="submit" class="button" value="Encrypt" />
 
-      <label for="decrypt">To Decrypt</label>
-      <textarea name="decrypt" id="decrypt"></textarea>
+                <label for="encrypted">Result:</label>
+                <textarea id="encrypted" rows="8"></textarea>
+              </div>
+              <div class="tabs-panel" id="decryptTab">
+                <label for="decrypt">Decrypt the following:</label>
+                <textarea name="decrypt" id="decrypt" rows="8"></textarea>
+                <input type="submit" class="button" value="Decrypt" />
 
-      <input type="submit" value="Submit" />
-    </form>
+                <label for="decrypted">Result:</label>
+                <textarea id="decrypted" rows="8"></textarea>
+              </div>
+            </div>
+          </form>
+        </div> <!-- /.cell -->
+      </div> <!-- /.grid-x -->
+    </div> <!-- /.container -->
 
-    <p>Encrypt output: <span id="encrypted"></span></p>
-    <p>Decrypt output: <span id="decrypted"></span></p>
+    <script type="text/javascript">$(document).foundation();</script>
   </body>
 </html>

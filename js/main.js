@@ -12,10 +12,10 @@ window.onload = function () {
 
     // To Encrypt
     var encrypted = encryptor.encrypt(toEncrypt);
-    document.getElementById("encrypted").innerHTML=encrypted;
+    document.getElementById("encrypted").value=encrypted;
 
     // To Decrypt
     var decrypted = encryptor.decrypt(toDecrypt);
-    document.getElementById("decrypted").innerHTML=decrypted;
+    document.getElementById("decrypted").value=decrypted;
   });
 }
