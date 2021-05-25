@@ -2,6 +2,8 @@
 
 Input a 'password' and use it to encrypt or decrypt text.
 
+[Demo](https://mcnamee.github.io/encrypt-decrypt/index.html)
+
 ## Install
 
 ```bash
